@@ -24,7 +24,7 @@
   margin: auto 1rem;
 
   a {
-    font-size: 3rem;
+    font-size: 3em;
     margin: auto 0.15rem;
     font-family: title-font;
     text-decoration: none;
@@ -49,7 +49,7 @@
 
   a {
     text-decoration: none;
-    font-size: 1.5rem;
+    font-size: 1.5em;
   }
 
   a:hover {
@@ -67,7 +67,7 @@
 
   a {
     text-decoration: none;
-    font-size: 1.3rem;
+    font-size: 1.3em;
     border-radius: 1rem;
     padding: 0.5rem 1rem;
     text-align: center;
@@ -90,26 +90,32 @@
 }
 
 @media only screen and (max-width: 650px) {
+  .header {
+    font-size: 10px; //Changing default(16px) to 10px that will shrink other fonts within header(em units).
+  }
+
   .header-list {
     a {
       display: none;
     }   
   }
 
-  .create-post {  // TODO: Button should be sticky at bottom right for mobiles.
-    a {
-      font-size: 1.1rem;
-      padding: 0.5rem 1rem;
-    }
-  }
-
   .header-title {
-    a {
-      font-size: 2rem;
-    }
-
     img {
       max-width: 50px;
     }
+  }
+
+  .create-post {  // TODO: Button should be sticky at bottom right for mobiles.
+    a {
+      // font-size: 1.1rem;
+      padding: 0.5rem 1rem;
+    }
+  }
+}
+
+@media (min-width: 360px) and (max-width: 420px) {
+  .header {
+    font-size: 8px;
   }
 }
