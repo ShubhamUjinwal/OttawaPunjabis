@@ -1,10 +1,19 @@
 .header {
-  display: flex;
-  margin: 1% auto;
-  
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  width: 100%;
+
   a {
     color: darkslategrey;
   }
+}
+
+.header nav {
+  display: flex;
+  margin: 1rem auto;
+  max-width: 1300px;
 }
 
 .header-title {
@@ -15,7 +24,7 @@
   margin: auto 1rem;
 
   a {
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin: auto 0.15rem;
     font-family: title-font;
     text-decoration: none;
@@ -72,7 +81,7 @@
 }
 
 
-@media only screen and (max-width: 1060px) {
+@media only screen and (max-width: 1100px) {
   .header-list {
     a {
       display: none;
