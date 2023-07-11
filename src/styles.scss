@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: 'title-font';
+  src: url('./assets/fonts/MavenPro-VariableFont_wght.ttf');
+}
+
+@font-face {
+  font-family: 'header-list-font';
+  src: url('./assets/fonts/MavenPro-VariableFont_wght.ttf');
+}
+
+
+*{
+  margin: 0;
+  padding: 0;
+}
