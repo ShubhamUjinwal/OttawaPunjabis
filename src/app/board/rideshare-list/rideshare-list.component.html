@@ -1,1 +1,5 @@
-<p>rideshare-list works!</p>
+<div class="rideshare-list-container">
+  <div class="rideshare-item" *ngFor="let rideshare of rideshare_posts">
+    <app-rideshare-item [rideshare_post]="rideshare" ></app-rideshare-item>
+  </div>
+</div>

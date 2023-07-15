@@ -10,7 +10,7 @@ h2 {
   flex-direction: column;
   justify-content: space-between;
   p {
-    font-size: 1.5em;
+    font-size: 2em;
     text-align: left;
     font-family: header-list-font;
     text-decoration: underline;
@@ -21,7 +21,7 @@ h2 {
 .accommodation-container,
 .jobs-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   p {
     margin: 2rem;

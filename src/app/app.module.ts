@@ -11,6 +11,7 @@ import { PostCardComponent } from './board/post-card/post-card.component';
 import { RideshareListComponent } from './board/rideshare-list/rideshare-list.component';
 import { AccommodationListComponent } from './board/accommodation-list/accommodation-list.component';
 import { JobsListComponent } from './board/jobs-list/jobs-list.component';
+import { RideshareItemComponent } from './board/rideshare-list/rideshare-item/rideshare-item.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { JobsListComponent } from './board/jobs-list/jobs-list.component';
     PostCardComponent,
     RideshareListComponent,
     AccommodationListComponent,
-    JobsListComponent
+    JobsListComponent,
+    RideshareItemComponent
   ],
   imports: [
     BrowserModule
