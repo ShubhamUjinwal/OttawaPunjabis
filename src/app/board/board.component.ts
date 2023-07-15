@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class BoardComponent {
 
+  title: string = "Board"
+  rideshare: string = "Rideshare"
+  accommodation: string = "Accommodation"
+  jobs: string = "Jobs"
 }

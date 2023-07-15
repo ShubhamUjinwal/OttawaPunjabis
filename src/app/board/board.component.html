@@ -1,3 +1,15 @@
+<h2>{{ title }}</h2>
 <div class="board">
-  <p>board works!</p>
+  <div class="rideshare-container">
+    <p>{{ rideshare }}</p>
+    <app-rideshare-list></app-rideshare-list>
+  </div>
+  <div class="jobs-container">
+    <p>{{ accommodation }}</p>
+    <app-accommodation-list></app-accommodation-list>
+  </div>
+  <div class="accommodation-container">
+    <p>{{ jobs }}</p>
+    <app-jobs-list></app-jobs-list>
+  </div>
 </div>
