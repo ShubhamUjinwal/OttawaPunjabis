@@ -1,5 +1,34 @@
-.rideshare-list-container {
+.rideshare-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+}
+
+.rideshare-list-container {
+  height: 18rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+}
+
+.rideshare-list-container::-webkit-scrollbar {
+  width: 0px;
+}
+
+
+
+.scroll-arrows::before {
+  background-image: linear-gradient(90deg, black, transparent);
+}
+
+.rideshare-item {
+  margin-left: 1em;
+}
+
+@media (min-width: 360px) and (max-width: 420px) {
+  .rideshare-list-container {
+    height: 12rem;
+  }
 }

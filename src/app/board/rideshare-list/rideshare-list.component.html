@@ -1,5 +1,9 @@
-<div class="rideshare-list-container">
-  <div class="rideshare-item" *ngFor="let rideshare of rideshare_posts">
-    <app-rideshare-item [rideshare_post]="rideshare" ></app-rideshare-item>
+<div class="rideshare-container">
+  <div class="scroll-arrows"></div>
+  <div class="rideshare-list-container">
+    <div class="rideshare-item" *ngFor="let rideshare of rideshare_posts; let i = index">
+      <app-rideshare-item [rideshare_post]="rideshare" [color_index] = "i+1"></app-rideshare-item>
+    </div>
   </div>
+  <div class="scroll-arrows"></div>
 </div>

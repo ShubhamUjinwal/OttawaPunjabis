@@ -1,5 +1,5 @@
 <div class="post">
-  <div class="details">
+  <div [ngStyle]="this.getRandomColor()" class="details">
     <h3>{{ rideshare_post.post_type }}</h3>
     <p>Rideshare on: {{ rideshare_post.available_on }}</p>
     <p>From: {{ rideshare_post.from }}</p>
