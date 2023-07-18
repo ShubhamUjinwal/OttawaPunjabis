@@ -12,6 +12,7 @@ import { RideshareListComponent } from './board/rideshare-list/rideshare-list.co
 import { AccommodationListComponent } from './board/accommodation-list/accommodation-list.component';
 import { JobsListComponent } from './board/jobs-list/jobs-list.component';
 import { RideshareItemComponent } from './board/rideshare-list/rideshare-item/rideshare-item.component';
+import { DragScrollModule } from 'ngx-drag-scroll';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { RideshareItemComponent } from './board/rideshare-list/rideshare-item/ri
     RideshareItemComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    DragScrollModule
   ],
   providers: [],
   bootstrap: [AppComponent]

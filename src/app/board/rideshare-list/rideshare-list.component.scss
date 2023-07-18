@@ -8,9 +8,10 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-
+  scrollbar-width: none;
   overflow-x: auto;
   overscroll-behavior-inline: contain;
+  cursor: grab;
 }
 
 .rideshare-list-container::-webkit-scrollbar {

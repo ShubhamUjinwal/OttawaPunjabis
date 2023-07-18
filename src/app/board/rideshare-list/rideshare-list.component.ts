@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Rideshare } from './rideshare.model';
 
 @Component({
@@ -6,7 +6,7 @@ import { Rideshare } from './rideshare.model';
   templateUrl: './rideshare-list.component.html',
   styleUrls: ['./rideshare-list.component.scss']
 })
-export class RideshareListComponent {
+export class RideshareListComponent implements OnInit {
   rideshare_posts: Rideshare[] = [
     new Rideshare('Offering', 'Ottawa', 'Toronto', '25 July 2023', 50, 'shubhamujinwal'),
     new Rideshare('Looking For', 'Brampton', 'Montreal', '16 July 2023', 40, 'abcd_1234'),

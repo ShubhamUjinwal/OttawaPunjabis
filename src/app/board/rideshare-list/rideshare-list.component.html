@@ -1,9 +1,11 @@
 <div class="rideshare-container">
   <div class="scroll-arrows"></div>
   <div class="rideshare-list-container">
-    <div class="rideshare-item" *ngFor="let rideshare of rideshare_posts; let i = index">
+  <drag-scroll #nav [scroll-x-wheel-enabled]="true">
+    <div class="rideshare-item" *ngFor="let rideshare of rideshare_posts; let i = index" drag-scroll-item>
       <app-rideshare-item [rideshare_post]="rideshare" [color_index] = "i+1"></app-rideshare-item>
     </div>
+  </drag-scroll>
   </div>
   <div class="scroll-arrows"></div>
 </div>
