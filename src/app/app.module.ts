@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { Routes, RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -13,6 +14,11 @@ import { AccommodationListComponent } from './board/accommodation-list/accommoda
 import { JobsListComponent } from './board/jobs-list/jobs-list.component';
 import { RideshareItemComponent } from './board/rideshare-list/rideshare-item/rideshare-item.component';
 import { DragScrollModule } from 'ngx-drag-scroll';
+
+const appRoutes: Routes = [
+  { path: '', component: HomeComponent },
+  { path: 'board', component: BoardComponent }
+]
 
 @NgModule({
   declarations: [
@@ -30,7 +36,8 @@ import { DragScrollModule } from 'ngx-drag-scroll';
   ],
   imports: [
     BrowserModule,
-    DragScrollModule
+    DragScrollModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]

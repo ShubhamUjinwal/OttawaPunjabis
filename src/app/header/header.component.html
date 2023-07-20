@@ -5,8 +5,8 @@
       <a href="#" class="title-name">{{ title }}</a>
     </div>
     <div class="header-list">
-      <a href="#">Home</a>
-      <a href="#">Board</a>
+      <a (click)="toHome()" routerLink="/home" routerLinkActive="active" >Home</a>
+      <a (click)="toBoard()" routerLinkActive="active" >Board</a>
       <a href="#">Contact Us</a>
       <a href="#">Follow Us!</a>
     </div>
