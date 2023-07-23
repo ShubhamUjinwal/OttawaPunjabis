@@ -15,6 +15,7 @@ import { AccommodationListComponent } from './board/accommodation-list/accommoda
 import { JobsListComponent } from './board/jobs-list/jobs-list.component';
 import { RideshareItemComponent } from './board/rideshare-list/rideshare-item/rideshare-item.component';
 import { DragScrollModule } from 'ngx-drag-scroll';
+import { RideshareFormComponent } from './create-post/rideshare-form/rideshare-form.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -33,7 +34,8 @@ const appRoutes: Routes = [
     RideshareListComponent,
     AccommodationListComponent,
     JobsListComponent,
-    RideshareItemComponent
+    RideshareItemComponent,
+    RideshareFormComponent
   ],
   imports: [
     BrowserModule,
