@@ -1,18 +1,4 @@
 <div class="container-sm">
-  <!-- <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-    <ul class="nav nav-pills">
-      <li class="nav-item">
-        <a class="nav-link" [ngClass]="{'active': selectedTab === 'home'}" (click)="selectTab('home')">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" [ngClass]="{'active': selectedTab === 'about'}" (click)="selectTab('about')">About</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" [ngClass]="{'active': selectedTab === 'contact'}" (click)="selectTab('contact')">Contact</a>
-      </li>
-    </ul>
-  </nav> -->
-
   <ul class="nav nav-pills nav-fill gap-2 p-1 small bg-primary rounded-5 shadow-sm" id="pillNav2" role="tablist" style="--bs-nav-link-color: var(--bs-white); --bs-nav-pills-link-active-color: var(--bs-primary); --bs-nav-pills-link-active-bg: var(--bs-white);">
     <li class="nav-item" role="presentation">
       <button (click)="selectTab('rideshare')"

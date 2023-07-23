@@ -9,7 +9,6 @@ import { CreatePostComponent } from './create-post/create-post.component';
 import { HomeComponent } from './home/home.component';
 import { BoardComponent } from './board/board.component';
 import { FooterComponent } from './footer/footer.component';
-import { PostCardComponent } from './board/post-card/post-card.component';
 import { RideshareListComponent } from './board/rideshare-list/rideshare-list.component';
 import { AccommodationListComponent } from './board/accommodation-list/accommodation-list.component';
 import { JobsListComponent } from './board/jobs-list/jobs-list.component';
@@ -18,8 +17,10 @@ import { DragScrollModule } from 'ngx-drag-scroll';
 import { RideshareFormComponent } from './create-post/rideshare-form/rideshare-form.component';
 
 const appRoutes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'board', component: BoardComponent }
+  { path: '',
+    component: HomeComponent,
+  },
+  { path: 'create-post', component: CreatePostComponent }
 ]
 
 @NgModule({
@@ -30,7 +31,6 @@ const appRoutes: Routes = [
     HomeComponent,
     BoardComponent,
     FooterComponent,
-    PostCardComponent,
     RideshareListComponent,
     AccommodationListComponent,
     JobsListComponent,
@@ -43,6 +43,7 @@ const appRoutes: Routes = [
     FormsModule,
     RouterModule.forRoot(appRoutes)
   ],
+  exports: [RouterModule],
   providers: [],
   bootstrap: [AppComponent]
 })
