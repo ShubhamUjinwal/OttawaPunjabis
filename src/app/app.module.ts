@@ -22,7 +22,7 @@ const appRoutes: Routes = [
   { path: '',
     component: HomeComponent,
   },
-  { path: 'create-post', component: CreatePostComponent }
+  { path: 'create-post', component: CreatePostComponent },
   { path: '**', component: HomeComponent }
 ]
 
