@@ -23,6 +23,7 @@ const appRoutes: Routes = [
     component: HomeComponent,
   },
   { path: 'create-post', component: CreatePostComponent }
+  { path: '**', component: HomeComponent }
 ]
 
 @NgModule({
