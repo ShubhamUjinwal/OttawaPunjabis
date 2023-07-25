@@ -1,0 +1,28 @@
+.container-sm {
+  margin-top: 1rem;
+  h5 {
+    margin-bottom: 1rem;
+  }
+  
+  .form-group {
+    margin-bottom: 0.5rem;
+  }
+}
+
+.form-row {
+  margin-bottom: 1rem;
+}
+
+.form-check-input {
+  margin-right: 0.5rem;
+}
+
+
+@media (min-width: 360px) and (max-width: 420px) {
+  .container-sm {
+    padding: 0;
+  }
+  .form-group {
+    margin: 1rem 0;
+  }
+}

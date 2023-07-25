@@ -1,0 +1,72 @@
+<div class="container-sm">
+  <form #myForm="ngForm" (ngSubmit)="onSubmit()">
+    <!-- Post Reason -->
+    <div class="form-row">
+      <h5>1. Select the reason</h5>
+      <div class="row g-3 align-items-center">
+        <div class="col-4">
+          <input 
+            [(ngModel)]="accommodationData.post_type"
+            value="Offering"
+            class="form-check-input"
+            type="radio"
+            name="flexRadioDefault"
+            id="flexRadioDefault1">
+          <label class="form-check-label" for="flexRadioDefault1">Offering</label>
+        </div>
+        <div class="col-6">
+          <input [(ngModel)]="accommodationData.post_type" value="Looking For" class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+          <label class="form-check-label" for="flexRadioDefault2">Looking for</label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Post Details -->
+    <div class="form-row">
+      <h5>2. Details</h5>
+      <div class="form-group">
+        <label for="dateInput">Select a date:</label>
+        <input type="date" class="form-control" id="dateInput" name="dateInput" [(ngModel)]="accommodationData.date">
+      </div>
+      <div class="form-group">
+        <label for="inputAddress">Accommodation Area</label>
+        <input [(ngModel)]="accommodationData.area" name="area" type="text" class="form-control" id="inputAddress" placeholder="Area and region" required>
+      </div>
+      <div class="form-group">
+        <label for="inputAddress2">Accommodation Type</label>
+        <input [(ngModel)]="accommodationData.type" name="type" type="text" class="form-control" id="inputAddress2" placeholder="Room, Apartment or Townhouse">
+      </div>
+      <div class="form-group">
+        <label for="inputState">Accommodation Setting</label>
+        <input [(ngModel)]="accommodationData.setting" name="setting" class="form-control" type="text" placeholder="Private or Sharing" aria-label="default input example">
+      </div>
+      <div class="form-group">
+        <label for="inputState">Price</label>
+        <input [(ngModel)]="accommodationData.price" name="price" class="form-control" type="text" placeholder="$" aria-label="default input example">
+      </div>
+    </div>
+
+    <!-- Contact info -->
+    <div class="form-row">
+      <h5>3. Contact Info</h5>
+      <div class="form-group">
+        <label for="inputState">Select contact type</label>
+        <select [(ngModel)]="accommodationData.contact_type" name="contact" id="inputState" class="form-control">
+          <option selected>Choose...</option>
+          <option>Instagram</option>
+          <option>Facebook</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="inputState">Username</label>
+        <div class="input-group">
+          <span class="input-group-text" id="inputGroupPrepend">@</span>
+          <input [(ngModel)]="accommodationData.username" name="username" type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+        </div>
+      </div>
+    </div>
+
+    <!-- Submit button-->
+    <button type="submit" class="btn btn-primary" [disabled]="!myForm.valid">Create Post</button>
+  </form>
+</div>
