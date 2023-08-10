@@ -1,0 +1,13 @@
+<div class="post">
+  <div [ngStyle]="this.getRandomColor()" class="details">
+    <h3>{{ jobs_post.post_type }}</h3>
+    <p>Posted on: {{ jobs_post.date }}</p>
+    <p>Type: {{ jobs_post.type }}</p>
+    <p>Description: {{ jobs_post.description }}</p>
+    <p>Location: {{ jobs_post.location }}</p>
+  </div>
+  <div class="contact-id">
+    <span>Insta ID</span>
+    <a href="#">{{ jobs_post.username }}</a>
+  </div>
+</div>

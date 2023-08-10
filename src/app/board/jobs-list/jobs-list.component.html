@@ -1,1 +1,9 @@
-<p>jobs-list works!</p>
+<div class="rideshare-container">
+  <div class="scroll-arrows"></div>
+  <div class="rideshare-list-container">
+    <div class="rideshare-item" *ngFor="let jobs of jobs_posts; let i = index">
+      <app-job-item [jobs_post] = "jobs" [color_index] = "i+1"></app-job-item>
+    </div>
+  </div>
+  <div class="scroll-arrows"></div>
+</div>

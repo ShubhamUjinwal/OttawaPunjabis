@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TaskService } from 'src/app/services/task.service';
 
 @Component({
   selector: 'app-jobs-form',
@@ -7,10 +8,12 @@ import { Component } from '@angular/core';
 })
 export class JobsFormComponent {
 
-    jobsData: any = {
+  constructor(private taskService: TaskService) {}
+
+  jobsData: any = {
     post_type: '',
     date: '',
-    job_type: '',
+    type: '',
     location: '',
     description: '',
     contact_type: '',
@@ -18,8 +21,16 @@ export class JobsFormComponent {
   }
 
   onSubmit() {
-    console.log('Form submitted with data:', this.jobsData);
-    // Add your form submission logic here (e.g., send data to the server)
+    const data = this.jobsData
+    this.taskService.createJobsPost(data).subscribe((response => {
+      console.log(response)
+    }))
+
+    this.clearJobsState();
+  }
+
+  clearJobsState() {
+    this.jobsData = {}
   }
 
 }

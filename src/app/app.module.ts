@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { Routes, RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
@@ -17,6 +18,8 @@ import { DragScrollModule } from 'ngx-drag-scroll';
 import { RideshareFormComponent } from './create-post/rideshare-form/rideshare-form.component';
 import { AccommodationFormComponent } from './create-post/accommodation-form/accommodation-form.component';
 import { JobsFormComponent } from './create-post/jobs-form/jobs-form.component';
+import { JobItemComponent } from './board/jobs-list/job-item/job-item.component';
+import { AccommodationItemComponent } from './board/accommodation-list/accommodation-item/accommodation-item.component';
 
 const appRoutes: Routes = [
   { path: '',
@@ -40,11 +43,14 @@ const appRoutes: Routes = [
     RideshareItemComponent,
     RideshareFormComponent,
     AccommodationFormComponent,
-    JobsFormComponent
+    JobsFormComponent,
+    JobItemComponent,
+    AccommodationItemComponent,
   ],
   imports: [
     BrowserModule,
     DragScrollModule,
+    HttpClientModule,
     FormsModule,
     RouterModule.forRoot(appRoutes)
   ],

@@ -1,1 +1,9 @@
-<p>accommodation-list works!</p>
+<div class="rideshare-container">
+  <div class="scroll-arrows"></div>
+  <div class="rideshare-list-container">
+    <div class="rideshare-item" *ngFor="let accommodation of accommodation_posts; let i = index">
+      <app-accommodation-item [accommodation_post] = "accommodation" [color_index] = "i+1"></app-accommodation-item>
+    </div>
+  </div>
+  <div class="scroll-arrows"></div>
+</div>

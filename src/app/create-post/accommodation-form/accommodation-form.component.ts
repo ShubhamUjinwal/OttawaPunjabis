@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TaskService } from 'src/app/services/task.service';
 
 @Component({
   selector: 'app-accommodation-form',
@@ -6,6 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./accommodation-form.component.scss']
 })
 export class AccommodationFormComponent {
+
+  constructor(private taskService: TaskService) {}
 
   accommodationData: any = {
     post_type: '',
@@ -19,7 +22,15 @@ export class AccommodationFormComponent {
   }
 
   onSubmit() {
-    console.log('Form submitted with data:', this.accommodationData);
-    // Add your form submission logic here (e.g., send data to the server)
+    const data = this.accommodationData
+    this.taskService.createAccommodationPost(data).subscribe((response => {
+      console.log(response)
+    }))
+
+    this.clearAccommodationState();
+  }
+
+  clearAccommodationState() {
+    this.accommodationData = {}
   }
 }

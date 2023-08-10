@@ -1,14 +1,14 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Rideshare } from '../rideshare.model';
+import { Accommodation } from '../accommodation.model';
 
 @Component({
-  selector: 'app-rideshare-item',
-  templateUrl: './rideshare-item.component.html',
-  styleUrls: ['./rideshare-item.component.scss']
+  selector: 'app-accommodation-item',
+  templateUrl: './accommodation-item.component.html',
+  styleUrls: ['./accommodation-item.component.scss']
 })
-export class RideshareItemComponent implements OnInit{
- 
-  @Input() rideshare_post!: Rideshare;
+export class AccommodationItemComponent {
+
+  @Input() accommodation_post!: Accommodation;
   @Input() color_index!: number;
 
   bg_colors = [
@@ -35,4 +35,6 @@ export class RideshareItemComponent implements OnInit{
     var getRandomColorIndex =  this.bg_colors[this.color_index % this.bg_colors.length]
     return {'background': "linear-gradient(to right,"+ getRandomColorIndex[0]+","+ getRandomColorIndex[1] +")"}
   }
+
+
 }
