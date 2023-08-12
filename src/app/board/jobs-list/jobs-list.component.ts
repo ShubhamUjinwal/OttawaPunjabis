@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { TaskService } from 'src/app/services/task.service';
 
 @Component({
@@ -9,6 +9,7 @@ import { TaskService } from 'src/app/services/task.service';
 export class JobsListComponent implements OnInit {
 
   public jobs_posts: any = [];
+  @Output() jobsPostsIndex = new EventEmitter<any>();
 
   constructor(private taskService: TaskService) {
   }
@@ -22,7 +23,7 @@ export class JobsListComponent implements OnInit {
       .fetchJobsPosts()
       .subscribe((response: any) => {
         this.jobs_posts = response
-        console.log("Response Jobs", this.jobs_posts);
+        this.jobsPostsIndex.emit(this.jobs_posts.length)
       })
   }
 

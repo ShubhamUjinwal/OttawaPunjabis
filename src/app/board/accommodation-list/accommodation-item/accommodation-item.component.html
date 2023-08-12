@@ -1,13 +1,13 @@
 <div class="post">
   <div [ngStyle]="this.getRandomColor()" class="details">
-    <h3>{{ accommodation_post.post_type }}</h3>
+    <h3>{{ accommodation_post.post_type }} {{ accommodation_post.type }}</h3>
     <p>Posted on: {{ accommodation_post.date }}</p>
-    <p>Area: {{ accommodation_post.area }}</p>
-    <p>Type: {{ accommodation_post.type }}</p>
     <p>Setting: {{ accommodation_post.setting }}</p>
+    <p>Price: ${{ accommodation_post.price }}</p>
+    <p>Area: {{ accommodation_post.area }}</p>
   </div>
   <div class="contact-id">
-    <span>Insta ID</span>
+    <span>{{ accommodation_post.contact_type }}</span>
     <a href="#">{{ accommodation_post.username }}</a>
   </div>
 </div>

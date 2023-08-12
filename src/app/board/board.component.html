@@ -1,15 +1,15 @@
 <h2>{{ title }}</h2>
 <div class="board">
   <div class="rideshare-container">
-    <p>{{ rideshare }}</p>
-    <app-rideshare-list></app-rideshare-list>
+    <p>{{ rideshare }} ({{ rideshare_index }})</p>
+    <app-rideshare-list (ridesharePostsIndex)="onRideshareDataAdded($event)"></app-rideshare-list>
   </div>
   <div class="jobs-container">
-    <p>{{ accommodation }}</p>
-    <app-accommodation-list></app-accommodation-list>
+    <p>{{ accommodation }} ({{ accommodation_index }})</p>
+    <app-accommodation-list (accommodationPostsIndex)="onAccommodationDataAdded($event)"></app-accommodation-list>
   </div>
   <div class="accommodation-container">
-    <p>{{ jobs }}</p>
-    <app-jobs-list></app-jobs-list>
+    <p>{{ jobs }} ({{ jobs_index }})</p>
+    <app-jobs-list (jobsPostsIndex)="onJobsDataAdded($event)"></app-jobs-list>
   </div>
 </div>

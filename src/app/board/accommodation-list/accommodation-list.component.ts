@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import { TaskService } from 'src/app/services/task.service';
 
 @Component({
@@ -9,6 +9,7 @@ import { TaskService } from 'src/app/services/task.service';
 export class AccommodationListComponent {
 
   public accommodation_posts: any = [];
+  @Output() accommodationPostsIndex = new EventEmitter<any>();
 
   constructor(private taskService: TaskService) {}
 
@@ -21,6 +22,7 @@ export class AccommodationListComponent {
       .fetchAccommodationPosts()
       .subscribe((response: any) => {
         this.accommodation_posts = response
+        this.accommodationPostsIndex.emit(this.accommodation_posts.length)
       })
   }
 }

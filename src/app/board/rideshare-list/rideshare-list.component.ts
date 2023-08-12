@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { TaskService } from 'src/app/services/task.service';
 
 @Component({
@@ -9,6 +9,7 @@ import { TaskService } from 'src/app/services/task.service';
 export class RideshareListComponent implements OnInit {
 
   public rideshare_posts: any = [];
+  @Output() ridesharePostsIndex = new EventEmitter<any>();
 
   constructor(private taskService: TaskService) {
 
@@ -23,6 +24,7 @@ export class RideshareListComponent implements OnInit {
       .fetchPosts()
       .subscribe((response: any) => {
         this.rideshare_posts = response
+        this.ridesharePostsIndex.emit(this.rideshare_posts.length)
       })
   }
 }

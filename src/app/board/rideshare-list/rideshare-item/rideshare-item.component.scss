@@ -1,6 +1,6 @@
 .post {
   width: 300px;
-  height: 260px;
+  min-height: 260px;
   display: flex;
   flex-direction: column;
   font-size: 1.1em;
@@ -57,10 +57,10 @@
 
 @media (min-width: 350px) and (max-width: 600px) {
   .post {
-    width: 200px;
-    height: 150px;
+    width: 220px;
+    min-height: 150px;
     font-size: 0.8em;
     // box-shadow: 0 20px 8px 0 rgba(0,0,0,0.2);
-    box-shadow: 0 3.1em 0.5em 0 rgba(0,0,0,0.2);
+    // box-shadow: 0 0.2em 0.5em 0 rgba(0,0,0,0.2);
   }
 }
