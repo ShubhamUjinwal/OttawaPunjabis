@@ -24,6 +24,10 @@ export class HeaderComponent {
     document.getElementById('contact_us')?.scrollIntoView()
   }
 
+  toSponsors() {
+    document.getElementById('sponsors')?.scrollIntoView()
+  }
+
   toFollowUs() {
     document.getElementById('follow_us')?.scrollIntoView()
   }

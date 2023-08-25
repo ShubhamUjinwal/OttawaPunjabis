@@ -20,6 +20,7 @@ import { AccommodationFormComponent } from './create-post/accommodation-form/acc
 import { JobsFormComponent } from './create-post/jobs-form/jobs-form.component';
 import { JobItemComponent } from './board/jobs-list/job-item/job-item.component';
 import { AccommodationItemComponent } from './board/accommodation-list/accommodation-item/accommodation-item.component';
+import { SponsorsComponent } from './sponsors/sponsors.component';
 
 const appRoutes: Routes = [
   { path: '',
@@ -46,6 +47,7 @@ const appRoutes: Routes = [
     JobsFormComponent,
     JobItemComponent,
     AccommodationItemComponent,
+    SponsorsComponent,
   ],
   imports: [
     BrowserModule,
