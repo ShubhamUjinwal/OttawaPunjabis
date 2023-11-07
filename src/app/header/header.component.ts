@@ -29,7 +29,7 @@ export class HeaderComponent {
   }
 
   toFollowUs() {
-    document.getElementById('follow_us')?.scrollIntoView()
+    document.getElementById('footer')?.scrollIntoView()
   }
 
   toCreatePost() {
